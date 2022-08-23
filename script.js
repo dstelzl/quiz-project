@@ -1,6 +1,46 @@
+//Document method for all of the IDs in html
+var start = document.getElementById("start");
+var quiz = document.getElementById("quiz");
+var questions = document.getElementById("questions");
+var end = document.getElementById("end");
+
+//Set up object array for questions
+let quizQuestions = [{
+    question1 : 'This is the text for Q1',
+    choiceA : 'correct',
+    choiceB : 'wrong',
+    choiceC : 'wrong',
+    correctAnswer : 'A'
+},
+{
+    question2 : 'This is the text for Q2',
+    choiceA : 'correct',
+    choiceB : 'wrong',
+    choiceC : 'wrong',
+    correctAnswer : 'A'
+},
+{
+    question3 : 'This is the text for Q3',
+    choiceA : 'correct',
+    choiceB : 'wrong',
+    choiceC : 'wrong',
+    correctAnswer : 'A'
+},
+{
+    question4: 'This is the text for Q4',
+    choiceA : 'correct',
+    choiceB : 'wrong',
+    choiceC : 'wrong',
+    correctAnswer : 'A'
+}]
+//
 
 
-var questions = [1,2,3,4];
+
+
+
+
+
 
 
 //Timer Function
