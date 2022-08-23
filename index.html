@@ -5,29 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Quiz</title>
-  <style>
-    * {
-      user-select: none;
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/style.css">
+  
 </head>
 <body>
   <section id="start">
     <h2>Start Quiz</h2>
-    <button>Begin</button>
+    <button id="start-button">Begin</button>
   </section>
   <section id="quiz">
     <h2 id="title">Questions</h2>
     <div id="questions">
+      <ul>
+        <li class= "choice" id="choice1"></li> 
+        <li class= "choice" id="choice2"></li>
+        <li class= "choice" id="choice3"></li>
+        <li class= "choice" id="choice4"></li>
+      </ul>
 
     </div>
   </section>
   <section id="end">
     <h2>Enter Initials</h2>
+    <p id = "user-score"></p>
     <input type="text" />
     <button>Submit</button>
   </section>
-  <script src="./script.js"></script>
+  <script src="./assets/script.js"></script>
 </body>
 </html>
 
