@@ -12,9 +12,11 @@ var choice4 = document.getElementById("choice4");
 var submitInitialsButton = document.getElementById("submit-initials");
 var finalScreen = document.getElementById("final-screen");
 var clock = document.getElementById("clock");
-
+var text = document.getElementById("text");
+var initials = document.getElementById("initials");
 var questionIndex;
 var userScore;
+
 //Set up objects/arrays for questions
 var questions = [
   {
@@ -80,22 +82,31 @@ function endGame() {
     "Your Score Was " + userScore;
     
 }
+
+
+
+function score() {
+  quiz.style.display = "none";
+  end.style.display = "block";
+  finalScreen.display='block';
+    
+}
+
 var timer = setTime();
-var secondsLeft = 45
+var secondsLeft = 20
 function setTime() {
   var quizCountdown = setInterval(function () {
-    console.log(secondsLeft);
     secondsLeft--;
     clock.textContent = secondsLeft
     
-
-    if (secondsLeft === 0) {
-      console.log("Time is up!");
+    if (secondsLeft === 0) 
       clearInterval(quizCountdown);
     }
-  }, 1000);
-}
-//setTime();   //uncomment when running
+    ,1000); 
+
+  }
+
+
 
 
 //creating dynamic user event to check for correct answer upon user clicking a choice
@@ -103,8 +114,6 @@ questionsEl.addEventListener("click", checkAnswer);
 //set start button to activate quiz when user clicks button
 startButton.addEventListener("click", startQuiz);
 
-//Math.floor((distance % (1000 * 60))/1000);
-//document.getElementById("clock").innerHTML = secondsLeft;
-
+submitInitialsButton.addEventListener('click', score);
 
 
