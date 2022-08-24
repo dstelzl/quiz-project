@@ -1,4 +1,5 @@
 //Document method for all of the IDs in html
+var bodyEl = document.querySelectorAll("body");
 var start = document.getElementById("start");
 var quiz = document.getElementById("quiz");
 var questionsEl = document.getElementById("questions");
@@ -12,11 +13,23 @@ var choice4 = document.getElementById("choice4");
 var submitInitialsButton = document.getElementById("submit-initials");
 var finalScreen = document.getElementById("final-screen");
 var clock = document.getElementById("clock");
-var text = document.getElementById("text");
 var initials = document.getElementById("initials");
 var questionIndex;
 var userScore;
-
+//Set Attributes to center
+start.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+quiz.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+questionsEl.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+end.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+startButton.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+currentQuestionEl.setAttribute("style", "margin:auto; width:60%; text-align:center;");
+choice1.setAttribute("style", "margin:auto; width:75%; text-align:center;");
+choice2 .setAttribute("style", "margin:auto; width:75%; text-align:center;");
+choice3.setAttribute("style", "margin:auto; width:75%; text-align:center;");
+choice4.setAttribute("style", "margin:auto; width:75%; text-align:center;");
+submitInitialsButton.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+finalScreen.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+clock.setAttribute("style", "margin:auto; width:50%; text-align:center;");
 //Set up objects/arrays for questions
 var questions = [
   {
@@ -89,7 +102,7 @@ function score() {
   quiz.style.display = "none";
   end.style.display = "block";
   finalScreen.display='block';
-    
+  //finalScreen.textContent = userScore; 
 }
 
 var timer = setTime();
@@ -107,13 +120,13 @@ function setTime() {
   }
 
 
-
+  var input = document. getElementById("input_id"). value; 
 
 //creating dynamic user event to check for correct answer upon user clicking a choice
 questionsEl.addEventListener("click", checkAnswer);
 //set start button to activate quiz when user clicks button
 startButton.addEventListener("click", startQuiz);
 
-submitInitialsButton.addEventListener('click', score);
+submitInitialsButton.addEventListener('click', input);
 
 

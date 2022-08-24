@@ -1,7 +1,14 @@
+
+
 #quiz{
     display: none;
-
+    
 }
 #end{
     display:none;
+   
+}
+#final-screen{
+    display: none;
+    
 }
